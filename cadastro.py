@@ -57,7 +57,7 @@ print(f'Idade Atual: {idade} anos')
 
 
 #Outra forma de capturar o nome: (Mais fácil)
-#nome = input('Digite seu nome: ')
+# nome = input('Digite seu nome: ')
 #print(f'Seja bem vindo, {nome}!') #Sem o "f" ele não reconhece a variável, e imprime o nome da variável, e não o valor dela.
 #Outra forma de fazer o format no print:
-#print('Seja bem vindo, {}!'.format(nome)) #ou print('Seja bem vindo, {nome}!').format(nome=nome))
+# print('Seja bem vindo, {}!'.format(nome)) #ou print('Seja bem vindo, {nome}!')
