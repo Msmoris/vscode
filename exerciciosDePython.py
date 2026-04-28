@@ -186,31 +186,37 @@ print(lista6)
 lista6 *= 2
 print(lista6)
  
- 
+#Adiciona um item na posição escolhida
 lista7=['a','b','c','d']
 lista7.insert(1,'p')
 print(lista7)
- 
+
+#Remove o ultimo item da lista 
 lista8=[1,2,3,4,5]
 lista8.pop()
+#Remove o item da posição escolhida
 lista8.pop(2)
 print(lista8)
- 
+
+#Remove o item pedido, se o item se repetir, o comando remove o primeiro que aparecer
 lista9= [1,2,3,4,5]
 lista9.remove(4)
 print(lista9)
- 
-lista10=('peixe','rola','balança rabo leitoso')
-print('jaraqué' in lista10)
- 
+
+#Procura um item na lista, retornando se há(True) ou não(False) esse item na lista
+lista10=('peixe','periquito','gato')
+print('peixe-boi' in lista10)
+
+#Informa a quantidade de itens dentro da lista
 lista11= ['1,2']
 print(len(lista11))
  
-# Conta a quantidade de itens iguais dentro da lista
+# Conta a quantidade de itens iguais dentro da lista, se o comando der erro ele retorna um numero inteiro (0)
 lista12= [1,2,1,3,1]
 print(lista12.count(1))
 print(lista12.count(4))
- 
+
+#Localiza um item dentro da lista, se o comando der erro ele retorna uma mensagem de erro
 lista13= [2,2,3,1,3]
 print(lista13.index(1))
 
