@@ -14,8 +14,8 @@ def cadastrar_peca():
     }
     
     pecas.append(peca) 
-
-    print('peça cadastrada com sucesso!')
+    
+    print('Peça cadastrada com sucesso!')
 
 # Função para mostrar estoque
 def mostrar_estoque():
@@ -30,22 +30,21 @@ def mostrar_estoque():
             print('-' * 20)
 
 # Menu principal
-    while True:
-        print('\nSISTEMA TOYOTA')
-        print('1 - Cadastrar peça')
-        print('2 - Mostrar estoque')
-        print('3 - Sair')
+# while True:
+            print('\nSISTEMA TOYOTA')
+            print('1 - Cadastrar peça')
+            print('2 - Mostrar estoque')
+            print('3 - Sair')
 
-        opcao = input('Escolha uma opção: ')
+            opcao = input('Escolha uma opção: ')
 
-        if opcao == '1':
-            cadastrar_peca()
-        elif opcao == '2':
-            mostrar_estoque()
-        elif opcao == '3':
-            print('Sistema encerrado.')
-            break
-        else:
-            print('Opção invalida.')            
+if opcao == '1':
+    cadastrar_peca()
+elif opcao == '2':
+    mostrar_estoque()
+elif opcao == '3':
+    print('Sistema encerrado.')
+else:
+    print('Opção invalida.')            
 
 
