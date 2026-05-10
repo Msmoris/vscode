@@ -30,7 +30,7 @@ def mostrar_estoque():
             print('-' * 20)
 
 # Menu principal
-# while True:
+    while True:
             print('\nSISTEMA TOYOTA')
             print('1 - Cadastrar peça')
             print('2 - Mostrar estoque')
@@ -38,13 +38,14 @@ def mostrar_estoque():
 
             opcao = input('Escolha uma opção: ')
 
-if opcao == '1':
-    cadastrar_peca()
-elif opcao == '2':
-    mostrar_estoque()
-elif opcao == '3':
-    print('Sistema encerrado.')
-else:
-    print('Opção invalida.')            
+    if opcao == '1':
+        cadastrar_peca()
+        input('Digite o nome da peça: ')
+    elif opcao == '2':
+        print(mostrar_estoque())
+    elif opcao == '3':
+        print('Sistema encerrado.')
+    else:
+        print('Opção invalida.')          
 
 
