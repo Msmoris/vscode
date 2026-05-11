@@ -5,6 +5,7 @@
 pecas = []
 
 def cadastrar_peca():
+    
     nome = input('Digite o nome da peça: ')
     quantidade = int(input('Digite a quantidade de peças: '))
 
@@ -25,8 +26,8 @@ def mostrar_estoque():
         print('\nESTOQUE DA TOYOTA')
 
         for peca in pecas:
-            print(f'Peça: {peca['nome']}')
-            print(f'Quantidade: {peca['quantidade']}')
+            print(f"Peça: {peca['nome']}")
+            print(f"Quantidade: {peca['quantidade']}")
             print('-' * 20)
 
 # Menu principal
