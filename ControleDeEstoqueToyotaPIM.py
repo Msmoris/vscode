@@ -1,51 +1,74 @@
 # Controle de Estoque - Toyota Boshoku (PIM I - 2026)
 
 # Cria-se uma lista 
-
 pecas = []
 
 def cadastrar_peca():
-    
-    nome = input('Digite o nome da peça: ')
+
+    nome = input('Digite o nome da peça: ').lower()
     quantidade = int(input('Digite a quantidade de peças: '))
 
-    peca = {
-        'nome': nome,
-        'quantidade': quantidade
+    # Verifica se a peça já existe
+    for peca in pecas:
+
+        if peca['nome'] == nome:
+            peca['quantidade'] += quantidade
+
+            print('Quantidade atualizada com sucesso!')
+            return
+
+
+# Em caso da peça não existir
+    nova_peca = {
+        'nome':nome,
+        'quantidade':quantidade
     }
     
-    pecas.append(peca) 
+    pecas.append(nova_peca) 
     
     print('Peça cadastrada com sucesso!')
 
+
 # Função para mostrar estoque
 def mostrar_estoque():
+
     if len(pecas) == 0:
         print('Nenhuma peça cadastrada.')
+
     else:
         print('\nESTOQUE DA TOYOTA')
 
         for peca in pecas:
-            print(f"Peça: {peca['nome']}")
+            print(f"Peça: {peca['nome'].capitalize()}")
             print(f"Quantidade: {peca['quantidade']}")
-            print('-' * 20)
+           
+        # Aviso de estoque baixo
+            if peca ['quantidade'] < 5:
+                print('Estoque baixo!')
+            
+            
+            print('=' * 20)
+
 
 # Menu principal
-    while True:
-            print('\nSISTEMA TOYOTA')
-            print('1 - Cadastrar peça')
-            print('2 - Mostrar estoque')
-            print('3 - Sair')
+while True:
+    print('\nSISTEMA TOYOTA')
+    print('1 - Cadastrar peça')
+    print('2 - Mostrar estoque')
+    print('3 - Sair')
 
-            opcao = input('Escolha uma opção: ')
+    opcao = input('Escolha uma opção: ')
 
     if opcao == '1':
         cadastrar_peca()
-        input('Digite o nome da peça: ')
+
     elif opcao == '2':
-        print(mostrar_estoque())
+        mostrar_estoque()
+
     elif opcao == '3':
         print('Sistema encerrado.')
+        break
+
     else:
         print('Opção invalida.')          
 
