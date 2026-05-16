@@ -19,7 +19,7 @@ while True:
         else:
             print('Erro: Divisão por zero não é permitida.')
             continue
-    else:
+    else:-+
         print('operação invalida')
         continue
 
