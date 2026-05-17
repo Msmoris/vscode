@@ -5,24 +5,29 @@ reservatorio = 0
 
 # Cria uma função
 def abastecer_reservatorio():
-
+    # Serve para usar a mesma variavel sempre, é uma variavel global, para todas as funções.
     global reservatorio
 
     litros = float(input('Digite a quantidade de óleo adicionada: '))
+    
 
+    # Função acumulativa 
+    
+# Soma a quantidade de litros adicionadas com a quantidade que já existe no reservatorio
     reservatorio += litros
 
+# Mostra o reservatorio atualizado
     print(f'Reservatório atualizado: {reservatorio} litros')
 
     
     # Função para distribuir o oleo
 
-    # Cria uma função
+# Cria uma função
 def distribuir_oleo():
         
     global reservatorio
 
-    vaga = input('Digite o numero da vaga: ')
+    vaga = int(input('Digite o numero da vaga: '))
     quantidade = float(input('Digite a quantidade de oleo desejada: '))
         
 # Verifica se há óleo suficiente no reservatorio
@@ -30,19 +35,29 @@ def distribuir_oleo():
 
         reservatorio -= quantidade 
 
-        print('\nÓleo distribuido para a vaga {vaga}.')
+        print(f'\nÓleo distribuido para a vaga {vaga}.')
+        # Mostra a vaga escolhida pelo usuario
 
         print(f'Reservatório restante: {reservatorio} litros')
-        
+        # Mostra a quantidade restante do reservatorio
     else:
-        print('\nERRO: óleo insuficiente noo reservatório!')
+        print('\nERRO: óleo insuficiente no reservatório!')
 
 # Função para mostar reservatório
 def mostar_reservatorio():
 
     print(f'\nQuantidade atual no reservatório: {reservatorio} litros')
+    
+    # Se o reservatorio estiver com menos de cinco litros, é mostrado um alerta.
+    if reservatorio <= 5:
+        print('Nivel de óleo baixo.')
+    elif reservatorio >= 5 and reservatorio <= 5.000:
+        print('Nivel de óleo razoavel.')
+    else:
+        print('Nivel de óleo estavel.') 
 
-    print('='*10)
+# Adicona o item '=' 50 vezes para divisão de função. 
+    print('='*50)
 
 
 # Menu Principal
@@ -69,8 +84,8 @@ while True:
     elif opcao == '4':
         print('\nSistema encerrado.')
         break
-
+        # O 'break' encerra o sistema
     else:
         print('\nOpção inválida. Tente novamente.')
 
-        
+
