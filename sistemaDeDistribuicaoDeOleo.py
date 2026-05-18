@@ -63,23 +63,30 @@ def distribuir_oleo():
     else:
         print('\nERRO: óleo insuficiente no reservatório!')
 
+
 def mostrar_relatorio():
+    # Se nao tiver nenhum consumo registrado na vaga, o codigo diz que nao tem registro de consumo.
     if len(relatorio) == 0:
         print('\nNenhum consumo registrado')
+    
+    # Se tem registro, o codigo mostra o relatorio de consumo.
     else:
         print('\nRELATORIO DE CONSUMO')
 
         total = 0
 
         for item in relatorio:
-
+            
+            # Uma caça dentro da lista 'relatorio'. O item busca a vaga e a quantidade para mostrar no relatorio de consumo.
             print(f'Vaga: {item["vaga"]}')
             print(f'Quantidade consumida: {item["quantidade"]} litros')
 
+            # Sistema acumulativo, quando o item é somado com o total, o valor se torna outro, daí vem o registro total de todas as vagas.
             total += item['quantidade']
 
         print('=' * 20)
 
+    # Mostra o consumo total de todas as bombas nas vagas.
     print(f"\nConsumo total: {total} litros.")
 
 
@@ -96,6 +103,7 @@ def mostar_reservatorio():
     else:
         print('Nivel de óleo estavel.') 
 
+
 # Adicona o item '=' 50 vezes para divisão de função. 
     print('='*50)
 
@@ -103,6 +111,7 @@ def mostar_reservatorio():
 
 # Menu Principal
 
+# Sistema de repetição.
 while True:
 
     print('\nRESERVATÓRIO DE ÓLEO')
