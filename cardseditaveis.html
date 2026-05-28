@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards Editáveis - Detetives da Pontuação</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Estrutura do Card Individual */
+        .card-individual {
+            width: 500px;
+            height: 650px;
+            background-color: #ffffff;
+            border: 5px solid #ff823a; /* Mude a cor da borda aqui */
+            border-radius: 30px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            background-image: radial-gradient(circle at 90% 10%, rgba(255,130,58,0.05) 0%, transparent 50%);
+        }
+
+        /* Estilo para variação de cores dos cards */
+        .borda-roxa { border-color: #bc84ee; }
+        .borda-verde { border-color: #dcfd8b; }
+        .borda-rosa { border-color: #ff7495; }
+
+        .card-titulo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e293b;
+            text-align: center;
+            margin: 0;
+            outline: none; /* Permite clicar e editar livremente */
+        }
+
+        .card-container-imagem {
+            width: 100%;
+            height: 220px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid #e2e8f0;
+            background-color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-container-imagem img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .card-texto-desafio {
+            background-color: #fafafa;
+            border: 2px dashed #cbd5e1;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 20px;
+            line-height: 2.2;
+            color: #334155;
+            flex-grow: 1;
+            outline: none; /* Permite clicar e editar o texto */
+        }
+
+        /* Caixas onde os alunos vão colocar as fichas ou escrever */
+        .caixa-pontuacao {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 2px solid #64748b;
+            border-radius: 6px;
+            background-color: #ffffff;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+
+        .linha-recuo {
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background-color: #cbd5e1;
+            margin-right: 8px;
+        }
+
+        /* Botão invisível na impressão */
+        @media print {
+            .btn-imprimir { display: none; }
+            body { background-color: #fff; padding: 0; }
+            .card-individual { box-shadow: none; page-break-inside: avoid; }
+        }
+
+        .btn-imprimir {
+            padding: 12px 25px;
+            font-size: 18px;
+            background-color: #005088;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-imprimir" onclick="window.print()">🖨️ Imprimir Cards Atualizados</button>
+
+    <div class="card-individual borda-rosa">
+        <div class="card-titulo" contenteditable="true">Chapeuzinho Vermelho</div>
+        
+        <div class="card-container-imagem">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/10390927276020921137" alt="Chapeuzinho">
+        </div>
+
+        <div class="card-texto-desafio" contenteditable="true">
+            <span class="linha-recuo"></span>O lobo mau apareceu no caminho e perguntou<span class="caixa-pontuacao"></span><br>
+            <span class="linha-recuo"></span><span class="caixa-pontuacao"></span>Aonde você vai com tanta pressa, menina<span class="caixa-pontuacao"></span>
+        </div>
+    </div>
+
+
+    <div class="card-individual borda-roxa">
+        <div class="card-titulo" contenteditable="true">Os Três Porquinhos</div>
+        
+        <div class="card-container-imagem">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/8507435996369160180" alt="Porquinhos">
+        </div>
+
+        <div class="card-texto-desafio" contenteditable="true">
+            <span class="linha-recuo"></span>O lobo soprou a casa de palha e gritou<span class="caixa-pontuacao"></span><br>
+            <span class="linha-recuo"></span><span class="caixa-pontuacao"></span>Abra a porta ou eu vou derrubar tudo<span class="caixa-pontuacao"></span>
+        </div>
+    </div>
+
+
+    <div class="card-individual borda-verde">
+        <div class="card-titulo" contenteditable="true">Cachinhos Dourados</div>
+        
+        <div class="card-container-imagem">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/7687898563008729348" alt="Cachinhos">
+        </div>
+
+        <div class="card-texto-desafio" contenteditable="true">
+            <span class="linha-recuo"></span>O Papai Urso olhou para a mesa e disse bravo<span class="caixa-pontuacao"></span><br>
+            <span class="linha-recuo"></span><span class="caixa-pontuacao"></span>Quem comeu o meu mingau<span class="caixa-pontuacao"></span>
+        </div>
+    </div>
+
+</body>
+</html>
