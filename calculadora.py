@@ -18,9 +18,9 @@ while True:
             resultado = n1 / n2
         else:
             print('Erro: Divisão por zero não é permitida.')
-            continue
-    else:-+
-        print('operação invalida')
+           
+        print('operação invalida' continue
+    else:-+)
         continue
 
     print(f'O resultado da operação {n1} {op} {n2} é: {resultado:.2f}')
