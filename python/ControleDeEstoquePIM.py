@@ -1,4 +1,4 @@
-# Controle de Estoque - Toyota Boshoku (PIM I - 2026)
+# Controle de Estoque - (PIM I - 2026)
 
 # Cria-se uma lista 
 pecas = []
