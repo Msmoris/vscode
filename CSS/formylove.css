@@ -1,0 +1,10 @@
+body {
+    background-color: pink;
+}
+
+.botao{
+    padding: 25px;
+    border-radius: 40px;
+    font-size: 15px;
+    cursor: url("CSS/kitty-mao-removebg-preview (1).png") 0 0, pointer;
+}
